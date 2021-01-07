@@ -1,43 +1,69 @@
 .masthead {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "menu-search . action-button" 
-    ". technologies ." 
-    "date logo todays-paper";
-}
-
-.masthead div {
-    /* border: 2px solid black */
-}
-
-.masthead__menu-and-search {
-    grid-area: menu-search;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .masthead__actions {
-    grid-area: action-button;
-    display: flex;
-}
-
-.masthead__technologies {
-    grid-area: technologies;
-    align-items: center;
+  display: flex;
+  grid-column-start: 3;
+  height: 50px;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .masthead__date {
-    grid-area: date;
+  align-items: flex-end;
+  border-bottom: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+  display: flex;
+  font-size: 11px;
+  grid-row-start: 3;
+  padding-bottom: 11px;
+}
+
+.masthead__icon-button {
+  font-size: 11px;
+  padding: 7px 9px;
+}
+
+.masthead__icon-button:hover {
+  background-color: #f7f7f5;
 }
 
 .masthead__logo {
-    grid-area: logo;
-    text-align: left;
+  border-bottom: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+  grid-column-start: 2;
+  grid-row-start: 3;
+  padding-bottom: 11px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.masthead__menu-and-search {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
 }
 
 .masthead__paper {
-    grid-area: todays-paper
+  border-bottom: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+  align-items: flex-end;
+  display: flex;
+  font-size: 11px;
+  justify-content: flex-end;
+  grid-column-start: 3;
+  grid-row-start: 3;
+  padding-bottom: 11px;
+}
+
+.masthead__technologies {
+  display: flex;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-content: center;
+  text-align: center;
 }
 
 .masthead__bars {
@@ -103,6 +129,7 @@
 .cog__wheel:hover {
     color: #6f6f6f;;
     transition: background-color .3s;
+    cursor: pointer;
 }
 
 
@@ -112,7 +139,13 @@
 }
 
 .masthead__technology-list {
+  background-color: white;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
   color: #6f6f6f;
   font-size: 10px;
+  position: relative;
   text-transform: uppercase;
+  top: 1px;
 }
